@@ -12,6 +12,8 @@ members = [
   "token/cli",
   "token/program",
   "token/program-v3",
+  "cpi-test/program",
+  "cpi-test/cli",
 ]
 exclude = [
   "shared-memory/client",

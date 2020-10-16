@@ -1,0 +1,25 @@
+[package]
+authors = ["Solana Maintainers <maintainers@solana.foundation>"]
+description = "SPL-CPI-test Command-line Utility"
+edition = "2018"
+homepage = "https://spl.solana.com/token"
+license = "Apache-2.0"
+name = "spl-cpi-test-cli"
+repository = "https://github.com/solana-labs/solana-program-library"
+version = "1.0.0"
+
+[dependencies]
+clap = "2.33.3"
+console = "0.12.0"
+serde_json = "1.0.59"
+solana-clap-utils = { version = "=1.3.17"}
+solana-cli-config = { version = "=1.4.0" }
+solana-cli-output = { version = "=1.3.17" }
+solana-client = { version = "=1.3.17" }
+solana-logger = { version = "=1.4.0" }
+solana-sdk = { version = "=1.3.17" }
+spl-cpi-test = { version = "1.0", path="../program" }
+
+[[bin]]
+name = "spl-cpi-test"
+path = "src/main.rs"

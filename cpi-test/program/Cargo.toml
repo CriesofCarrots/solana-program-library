@@ -1,0 +1,26 @@
+
+# Note: This crate must be built using do.sh
+
+[package]
+name = "spl-cpi-test"
+version = "1.0.9"
+description = "Solana Program Library Memo"
+authors = ["Solana Maintainers <maintainers@solana.foundation>"]
+repository = "https://github.com/solana-labs/solana-program-library"
+license = "Apache-2.0"
+edition = "2018"
+
+[features]
+no-entrypoint = []
+program = ["solana-sdk/program"]
+default = ["solana-sdk/default"]
+
+[dependencies]
+num-derive = "0.3"
+num-traits = "0.2"
+solana-sdk = { version = "1.3.17", default-features = false, optional = true }
+thiserror = "1.0"
+
+[lib]
+name = "spl_cpi_test"
+crate-type = ["cdylib", "lib"]
