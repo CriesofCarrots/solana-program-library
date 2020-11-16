@@ -2729,7 +2729,7 @@ dependencies = [
  "num-traits",
  "solana-runtime",
  "solana-sdk",
- "solana_rbpf",
+ "solana_rbpf 0.1.32",
  "thiserror",
 ]
 
@@ -3254,6 +3254,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana_rbpf"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "09e18fa1e1b6cac20a5f2571882b7580a65ae685b1413fc498f975d07d4c968f"
+dependencies = [
+ "byteorder",
+ "combine",
+ "goblin",
+ "hash32",
+ "libc",
+ "log",
+ "rand",
+ "scroll",
+ "thiserror",
+ "time",
+]
+
+[[package]]
 name = "spin"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3321,6 +3339,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "spl-feature-proposal"
+version = "1.0.0-pre1"
+dependencies = [
+ "borsh",
+ "borsh-derive",
+ "futures 0.3.5",
+ "solana-program",
+ "solana-program-test",
+ "solana-sdk",
+ "spl-token 3.0.0",
+ "tokio 0.3.3",
+]
+
+[[package]]
 name = "spl-memo"
 version = "2.0.0"
 dependencies = [
@@ -3344,7 +3376,7 @@ dependencies = [
  "solana-bpf-loader-program",
  "solana-program",
  "solana-sdk",
- "solana_rbpf",
+ "solana_rbpf 0.2.0",
 ]
 
 [[package]]
@@ -3492,7 +3524,7 @@ dependencies = [
  "solana-bpf-loader-program",
  "solana-runtime",
  "solana-sdk",
- "solana_rbpf",
+ "solana_rbpf 0.2.0",
  "spl-token 3.0.0",
 ]
 
