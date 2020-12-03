@@ -17,7 +17,7 @@ solana-clap-utils = "1.4.9"
 solana-cli-config = "1.4.9"
 solana-cli-output = "1.4.9"
 solana-client = "1.4.9"
-solana-logger = "1.4.9"
+solana-logger = "1.4.14"
 solana-remote-wallet = "1.4.9"
 solana-sdk = "1.4.9"
 spl-token = { version = "3.0", path="../program", features = [ "no-entrypoint" ] }
