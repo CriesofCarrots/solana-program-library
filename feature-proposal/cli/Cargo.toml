@@ -13,7 +13,7 @@ clap = "2.33.3"
 solana-clap-utils = "1.4.8"
 solana-cli-config = "1.4.8"
 solana-client = "1.4.8"
-solana-logger = "1.4.8"
+solana-logger = "1.4.20"
 solana-sdk = "1.4.8"
 spl-feature-proposal = { version = "1.0", path = "../program", features = ["no-entrypoint"] }
 
