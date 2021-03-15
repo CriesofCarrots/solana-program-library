@@ -3113,13 +3113,14 @@ dependencies = [
 
 [[package]]
 name = "solana-bpf-loader-program"
-version = "1.5.11"
+version = "1.5.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9718cac7c73e4c3a9e8f29322efeb81c217886dc7f2303c00b0e2b1f94ef25b5"
+checksum = "2bf05bcf180e17c0ac6ac0d71ea0feb10f7300e87594a2421e122b850b5374a1"
 dependencies = [
  "bincode",
  "byteorder",
  "curve25519-dalek 3.0.2",
+ "log",
  "num-derive",
  "num-traits",
  "rand_core 0.6.2",
