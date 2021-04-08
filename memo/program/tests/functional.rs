@@ -117,7 +117,6 @@ async fn test_memo_signing() {
 }
 
 #[tokio::test]
-#[ignore]
 async fn test_memo_compute_limits() {
     let (mut banks_client, payer, recent_blockhash) = program_test().start().await;
 
@@ -129,12 +128,12 @@ async fn test_memo_compute_limits() {
     }
 
     let mut transaction =
-        Transaction::new_with_payer(&[build_memo(&memo[..450], &[])], Some(&payer.pubkey()));
+        Transaction::new_with_payer(&[build_memo(&memo[..820], &[])], Some(&payer.pubkey()));
     transaction.sign(&[&payer], recent_blockhash);
     banks_client.process_transaction(transaction).await.unwrap();
 
     let mut transaction =
-        Transaction::new_with_payer(&[build_memo(&memo[..600], &[])], Some(&payer.pubkey()));
+        Transaction::new_with_payer(&[build_memo(&memo[..840], &[])], Some(&payer.pubkey()));
     transaction.sign(&[&payer], recent_blockhash);
     let err = banks_client
         .process_transaction(transaction)
@@ -154,12 +153,12 @@ async fn test_memo_compute_limits() {
     }
 
     let mut transaction =
-        Transaction::new_with_payer(&[build_memo(&memo[..60], &[])], Some(&payer.pubkey()));
+        Transaction::new_with_payer(&[build_memo(&memo[..180], &[])], Some(&payer.pubkey()));
     transaction.sign(&[&payer], recent_blockhash);
     banks_client.process_transaction(transaction).await.unwrap();
 
     let mut transaction =
-        Transaction::new_with_payer(&[build_memo(&memo[..63], &[])], Some(&payer.pubkey()));
+        Transaction::new_with_payer(&[build_memo(&memo[..210], &[])], Some(&payer.pubkey()));
     transaction.sign(&[&payer], recent_blockhash);
     let err = banks_client
         .process_transaction(transaction)

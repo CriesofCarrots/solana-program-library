@@ -73,6 +73,6 @@ limiting the memo length and number of signers that can be processed
 successfully in a single instruction. The longer or more complex the UTF-8 memo,
 the fewer signers can be supported, and vice versa.
 
-As of v1.5.1, an unsigned instruction can support single-byte UTF-8 of up to 566
+As of v1.6.5, an unsigned instruction can support single-byte UTF-8 of up to 820
 bytes. An instruction with a simple memo of 32 bytes can support up to 12
 signers.
