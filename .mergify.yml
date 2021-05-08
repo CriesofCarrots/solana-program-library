@@ -9,7 +9,7 @@ pull_request_rules:
       - check-success=Travis CI - Pull Request
       - check-success=all_github_action_checks
       - label=automerge
-      - author≠@dont-squash-my-commits
+      # - author≠@dont-squash-my-commits
     actions:
       merge:
         method: squash
@@ -19,7 +19,7 @@ pull_request_rules:
       - check-success=Travis CI - Pull Request
       - check-success=all_github_action_checks
       - label=automerge
-      - author=@dont-squash-my-commits
+      # - author=@dont-squash-my-commits
     actions:
       merge:
         method: rebase

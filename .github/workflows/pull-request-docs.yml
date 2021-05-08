@@ -12,7 +12,7 @@ on:
 jobs:
   check_non_docs:
     outputs:
-      run_job: ${{ steps.check_files.outputs.run_all_github_action_checks }}
+      run_all_github_action_checks: ${{ steps.check_files.outputs.run_all_github_action_checks }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -23,8 +23,8 @@ jobs:
       - name: check modified files
         id: check_files
         run: |
-          git diff --name-only HEAD^ HEAD > files.txt
           echo "::set-output name=run_all_github_action_checks::true"
+          git diff --name-only HEAD^ HEAD > files.txt
           while IFS= read -r file
           do
             if [[ $file != docs/** ]]; then
@@ -33,7 +33,6 @@ jobs:
               break
             fi
           done < files.txt
-
 
   all_github_action_checks:
     runs-on: ubuntu-latest
